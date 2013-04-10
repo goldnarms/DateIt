@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Should">
+      <HintPath>..\packages\Should.1.1.12.0\lib\Should.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -113,6 +116,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\DateItItemsHandlerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />
   </ItemGroup>
@@ -123,6 +127,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DateIt.DAL\DateIt.DAL.csproj">
+      <Project>{b95b9424-da94-4fa1-be0d-385c615ff104}</Project>
+      <Name>DateIt.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DateIt.PCL\DateIt.PCL.csproj">
+      <Project>{1041eead-ed62-4702-8db7-ccc5bc071181}</Project>
+      <Name>DateIt.PCL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DateIt.Web\DateIt.Web.csproj">
       <Project>{C33AE09A-3820-4D81-AC6C-41D9D1EDEA10}</Project>
       <Name>DateIt.Web</Name>

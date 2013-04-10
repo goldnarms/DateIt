@@ -1,6 +1,6 @@
-﻿using DateIt.Resources;
+﻿using DateIt.WP.Resources;
 
-namespace DateIt
+namespace DateIt.WP
 {
     /// <summary>
     /// Provides access to string resources.

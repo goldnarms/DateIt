@@ -7,6 +7,6 @@ namespace DateIt.PCL.Interfaces
 {
     public interface IBarcodeScanner
     {
-        public int Scan(byte[] image);
+        int Scan(byte[] image);
     }
 }

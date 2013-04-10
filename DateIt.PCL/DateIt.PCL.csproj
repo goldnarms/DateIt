@@ -36,7 +36,13 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FakeServices\FakeDateItItemHandler.cs" />
+    <Compile Include="FakeServices\FakeOpenedDateItItemHandler.cs" />
+    <Compile Include="Interfaces\IDateItItemsHandler.cs" />
     <Compile Include="Interfaces\IBarcodeScanner.cs" />
+    <Compile Include="Interfaces\IOpenedDateItItemHandler.cs" />
+    <Compile Include="Models\DateItItem.cs" />
+    <Compile Include="Models\OpenedItems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BarcodeScanner.cs" />
   </ItemGroup>

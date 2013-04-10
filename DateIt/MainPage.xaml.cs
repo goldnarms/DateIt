@@ -7,9 +7,9 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using DateIt.Resources;
+using DateIt.WP.Resources;
 
-namespace DateIt
+namespace DateIt.WP
 {
     public partial class MainPage : PhoneApplicationPage
     {
