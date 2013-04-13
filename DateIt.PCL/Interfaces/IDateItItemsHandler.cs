@@ -10,8 +10,10 @@ namespace DateIt.PCL.Interfaces
     {
         void AddNewDateItItem(string name, int barcodeId, int days);
 
-        IEnumerable<DateItItem> GetAllDateItItems();
+        IEnumerable<DateItItem> GetAll();
 
-        DateItItem GetDateItItemByBarcode(int p);
+        DateItItem GetByBarcode(int p);
+        void RemoveAll();
+        DateItItem GetByName(string appelsinjuice);
     }
 }

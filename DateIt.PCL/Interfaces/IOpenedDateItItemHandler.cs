@@ -6,10 +6,11 @@ using System.Text;
 
 namespace DateIt.PCL.Interfaces
 {
-    public interface IOpenedDateItItemHandler
+    public interface IOpenedItemHandler
     {
-        void OpenItem(Models.DateItItem openedItem, DateTime dateTime);
+        void OpenItem(DateItItem openedItem, DateTime dateTime);
 
-        IEnumerable<OpenedItem> GetAllOpenedDateItItems();
+        IEnumerable<OpenedItem> GetAll();
+        void RemoveAll();
     }
 }

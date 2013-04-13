@@ -7,35 +7,35 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using DateIt.WP.Resources;
+using Microsoft.Phone.Tasks;
 
 namespace DateIt.WP
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        // Constructor
+        private ApplicationBarIconButton _cameraButton;
+        CameraCaptureTask _ctask;
         public MainPage()
         {
             InitializeComponent();
+        }
+        private void InitAppBar()
+        {
+            var appBar = new ApplicationBar();
+            _cameraButton = new ApplicationBarIconButton(new Uri("Assets/appbar.feature.camera.rest.png", UriKind.Relative));
+            _cameraButton.Click += CameraButton_Click;
+            _cameraButton.Text = "Capture";
+            appBar.Buttons.Add(_cameraButton);
 
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
         }
 
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
+        private void CameraButton_Click(object sender, EventArgs e)
+        {
+            _ctask.Show();
 
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
-
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
+            //Set progress bar to visible to show time between user snapshot and decoding
+            //of image into a writeable bitmap object.
+            //progressBar1.Visibility = Visibility.Visible;
+        }
     }
 }

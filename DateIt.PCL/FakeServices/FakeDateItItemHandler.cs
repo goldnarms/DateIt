@@ -21,17 +21,31 @@ namespace DateIt.PCL.FakeServices
         }
 
 
-        public IEnumerable<DateItItem> GetAllDateItItems()
+        public IEnumerable<DateItItem> GetAll()
         {
             return _dictionary.Select(kvp => kvp.Value);
         }
 
 
-        public DateItItem GetDateItItemByBarcode(int barcode)
+        public DateItItem GetByBarcode(int barcode)
         {
             DateItItem foundDateItItem;
             _dictionary.TryGetValue(barcode, out foundDateItItem);
             return foundDateItItem;
+        }
+
+        public void RemoveAll()
+        {
+            _dictionary.Clear();
+        }
+
+        public DateItItem GetByName(string name)
+        {
+            var item = _dictionary.SingleOrDefault(kvp => kvp.Value.Name.ToLower() == name.ToLower().Trim());
+            if (item.Value != null)
+                return item.Value;
+            return null;
+
         }
     }
 }
