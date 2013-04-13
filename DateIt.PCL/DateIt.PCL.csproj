@@ -45,6 +45,7 @@
     <Compile Include="Interfaces\IOpenedDateItItemHandler.cs" />
     <Compile Include="Models\DateItItem.cs" />
     <Compile Include="Models\OpenedItems.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BarcodeScanner.cs" />
   </ItemGroup>

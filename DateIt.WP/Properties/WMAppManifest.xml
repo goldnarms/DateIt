@@ -2,7 +2,7 @@
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US"/>
-  <App xmlns="" ProductID="{56485976-c9f7-42f4-8635-b80ec19a54f9}" Title="DateIt" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="DateIt author" Description="Sample description" Publisher="DateIt" PublisherID="{73dbba94-dafb-4ae1-9ba7-d8a5cdb041a1}">
+  <App xmlns="" ProductID="{351c377f-2175-4c29-b755-8a61632af7e4}" Title="DateIt.WP" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="DateIt.WP author" Description="Sample description" Publisher="DateIt.WP" PublisherID="{8cbe5ce6-ad77-47f8-9866-be2ecf6f5606}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>
@@ -15,12 +15,12 @@
       <DefaultTask  Name ="_default" NavigationPage="MainPage.xaml"/>
     </Tasks>
     <Tokens>
-      <PrimaryToken TokenID="DateItToken" TaskName="_default">
+      <PrimaryToken TokenID="DateIt.WPToken" TaskName="_default">
         <TemplateFlip>
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>DateIt</Title>
+          <Title>DateIt.WP</Title>
           <BackContent></BackContent>
           <BackBackgroundImageURI></BackBackgroundImageURI>
           <BackTitle></BackTitle>
